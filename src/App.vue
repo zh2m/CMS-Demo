@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <h3 class="title">{{title}}</h3>
+    <router-view></router-view>
   </div>
 </template>
 
+<script>
+export default {
+  name: "App",
+  data: function() {
+    return {
+      title: "学习vue+mongod+nodejs构建项目后台"
+    };
+  }
+};
+</script>
 <style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
